@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/time2/time2",
+    "pages/logs/logs",
+    "pages/setting/setting",
+    "pages/course/course"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程表",
+        "iconPath": "images/course_.png",
+        "selectedIconPath": "images/course.png"
+      },
+      {
+        "pagePath": "pages/time2/time2",
+        "text": "时间",
+        "iconPath": "images/course_.png",
+        "selectedIconPath": "images/course.png"
+      }
+      
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

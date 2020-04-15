@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "个人主页",
+  "backgroundColor": "#222",
+  "enablePullDownRefresh": false
+}
