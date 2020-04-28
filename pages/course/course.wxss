@@ -33,6 +33,7 @@
     height: 6rem;
     /* text-align: center; */
     align-items: center;
+    word-break:break-all;
 }
 
 

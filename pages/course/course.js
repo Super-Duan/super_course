@@ -11,12 +11,65 @@ Page({
       ["十一十二","","","","",""]
     ],//课程列表
     course_empty:true,
+    hiddenmodalput:true,
+    userplan:"",
+    rowPlan:-1,
+    colPlan:-1,
+    inputValue:null
 },
+
 onShow: function(options){
   this.showCourse();
 },
 
+//点击表格中view，弹出输入弹框
+modalinput:function(e){
+  this.setData({
+     hiddenmodalput: !this.data.hiddenmodalput
+  })
+  var that = this;
+  var i = e.currentTarget.dataset.row;
+  var j = e.currentTarget.dataset.col;
+  this.setData({
+    rowPlan: i,
+    colPlan: j
+  })
+  console.log(this.data.listData)
+},
+
+//获取plan的input值
+getUserplan: function(e){
+  // console.log(e)
+  this.setData({
+    userplan: e.detail.value
+  })
+},
+
+//取消按钮
+cancel: function(){
+      this.setData({
+          hiddenmodalput: true,
+          inputValue:"",
+          userplan: ""
+      });
+  },
+
+//确认按钮
+confirm: function(e){
+  var i = this.data.rowPlan
+  var j = this.data.colPlan
+  var a = "listData["+i+"]["+j+"]";
+  this.setData({
+    hiddenmodalput: true,
+    [a]: this.data.userplan,
+    inputValue: "",
+    userplan:""
+})
+console.log(this.data.listData)
+},
+
 onLoad:function(){
+  console.log(this.data.listData)
   
 },
 
@@ -38,11 +91,14 @@ if(!wx.getStorageSync('isLogin')){
     course_empty:false,
     listData: this.listData
       });
+    console.log(this.data.listData)
+    
       // wx.setStorageSync(course_cache, this.listData) //缓存课表
-      console.log(this.listData);
+      // console.log(this.listData);
     
   }
 },
+
 });
 
 
