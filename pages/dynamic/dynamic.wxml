@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<!-- 头部内容 -->
+<view class="template" wx:for='{{pageList}}' wx:key='index'>
+	<view class="header">
+		<image src="{{item.avatar}}" class="avatar"></image>
+		<view class="name">{{item.name}}</view>
+		<view class="school">{{item.school}}</view>
+	</view>
+	<!-- 中间内容 -->
+	<view class="content" catchtap="commentDetail" data-id="{{item.id}}">
+		{{item.content}}
+		<view class="gallery">
+			<!-- 点击图片时，用data-index将该图片所在的数组下标传入 -->
+			<image src="{{itemImg}}" class="photo" wx:for="{{pageList[index].images}}" wx:for-item="itemImg" wx:key='index' catchtap="onClickShow" data-id="{{item.id}}"></image>
+		</view>
+	</view>
+	<!-- 底部内容 -->
+	<view class="bottom">
+		<view class="comment" catchtap="click" data-id='{{item.id}}'>
+			<input class="input" type="submit" placeholder="发表评论" disabled="true"></input>
+		</view>
+		<view class="comment2">
+		<!-- <van-icon name="chat" info="9"  size="30px"/> -->
+			<image src="../../images/icon/comment.png" class="comment_img" catchtap="commentDetail" data-id="{{item.id}}"></image>
+			<text class="C_title">{{item.support.avatars.length}}</text>
+		</view>
+		<view class="support">
+			<image wx:if="{{item.support.status}}" src="../../images/icon/supportActive.png" class="support_img" catchtap="support" data-id="{{item.id}}"></image>
+			<image wx:else src="../../images/icon/support.png" class="support_img" catchtap="support" data-id="{{item.id}}"></image>
+			<text class="S_title">{{item.support.avatars.length}}</text>
+		</view>
+	</view>
+
+
+	<!--点击图片时的画廊组件 -->
+	<van-overlay show="{{show}}" bind:click="onClickHide">
+		<view class="wrapper">
+			<view class="page-section page-section-spacing swiper">
+				<swiper indicator-dots="true" autoplay="{{autoplay}}" circular="false" interval="2000" duration="500" class="swiper">
+					<block>
+						<swiper-item wx:for="{{gallery}}" wx:for-item="itemImg" wx:key='item'>
+							<view class="swiper-item">
+								<image src="{{itemImg}}" class="gallery_item"></image>
+							</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+	</van-overlay>
+	<!-- 发布动态图标 -->
+	<view class="post" catchtap="post">
+		<image src="../../images/icon/add.png" class="add"></image>
+	</view>
+	<!-- 发布评论 -->
+	<!-- <view class="post_comment" wx:if="{{show1}}" style="bottom:{{inputHeight}}px">
+			<textarea  placeholder="说点什么吧" bindinput="comment" class="comments" focus="{{show1}}" show-confirm-bar="{{false}}" bindfocus="inputFocus" bindblur='unPost' adjust-position="false" auto-height></textarea>
+		<van-button type="info" class="send" catchtap="send" style="bottom:{{inputHeight}}px">发送</van-button>
+	</view> -->
+</view>
+<view  class="cf-bg" catchtap="cemojiCfBg" style="display:{{cfBg ? 'block' : 'none'}}"></view>
+	<view wx:if="{{show1}}" class="comment-fixed">
+		<view class="cf-box">
+			<view class="emoji iconfont icon-emoji" catchtap="emojiShowHide"></view>
+			<textarea class="cf-content"  bindinput="comment" focus="{{show1}}" show-confirm-bar="{{false}}" bindfocus="inputFocus"  adjust-position="false" value="{{comment}}" placeholder="我要评论" fixed="true" auto-height/>
+			<text class="cf-send touch-active" bindtap="send">发送</text>
+    </view>
+     <!-- emoji表情盒子 -->
+    <view class="emoji-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}">
+      <scroll-view scroll-y="true"style="height:200px">
+        <block wx:for="{{emojis}}" wx:for-item="e" wx:key="index">
+          <view class="emoji-cell">
+            <image class="touch-active" catchtap="emojiChoose" src="http://soupu.oss-cn-shanghai.aliyuncs.com/emoji/{{e.emoji}}.png" data-emoji="{{e.char}}" data-oxf="{{e.emoji}}"></image>
+          </view>
+        </block>
+      </scroll-view>
+    </view> 
+		</view>

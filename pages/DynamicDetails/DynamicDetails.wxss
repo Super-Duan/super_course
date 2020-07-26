@@ -1,0 +1,376 @@
+
+@import '/iconfont/iconfont.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  font-family: Segoe UI Emoji;
+} 
+.template {
+  width: 94%;
+  padding: 3%;
+  margin-top: 20rpx;
+  border-top: 10rpx solid rgba(1, 1, 1, 0.1);
+}
+
+.header {
+  font-family:'HYZhengYuan';
+  width: 100%;
+  height: 100rpx;
+  display: block;
+}
+
+.avatar {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+.name {
+  font-family:'HYZhengYuan';
+  margin-bottom: 20rpx;
+  width: 200px;
+  float: left;
+}
+
+.school {
+  font-family:'HYZhengYuan';
+  width: 200px;
+  font-size: 20rpx;
+  color: grey;
+}
+/* 内容相关样式 */
+.content {
+  width: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+/* 动态详情点赞部分样式 */
+.supportDetails{
+  font-family:'HYZhengYuan';
+  display: block;
+  width: 100%;
+}
+/* 动态详情下的点赞那一块的样式 */
+.supportTitle{
+  width: 100%;
+  font-size: 14px;
+  height:20px;
+  font-weight: 600;
+  padding: 10px;
+  background-color: rgb(247,247,246);
+}
+
+.avatars {
+  width: 100%;
+  height: 40px;
+  padding-bottom:10px;
+  display: block;
+}
+
+.avatars-item{
+  width: 40px;
+  height:40px;
+  display: block;
+  margin-left: 5px;
+  border-radius: 50%;
+  float: left;
+
+}
+/* 动态详情下的评论样式 */
+.commentDetails{
+  width: 100%;
+  display: block;
+  font-family:'HYZhengYuan';
+}
+
+.commentTitle{
+  width: 100%;
+  font-size: 14px;
+  height:20px;
+  font-weight: 600;
+  padding: 10px;
+  background-color: rgb(247,247,246);
+}
+/* 动态详情下评论头部样式其中的姓名和学校引用了header中的样式 */
+.commentHeader{
+  width: 100%;
+  padding: 5px;
+  display: block;
+}
+
+.commentAvatar{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+.commentName{
+  font-family:'HYZhengYuan';
+  font-size: 12px;
+  margin-bottom: 10rpx;
+  width: 200px;
+  float: left;
+}
+.comment_avatar{
+  height: 40rpx;
+  width: 40rpx;
+  float: left;
+}
+
+.comment-img{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.support-img{
+  height: 40rpx;
+  width: 40rpx;
+  margin-left: 50px;
+  float: left;
+}
+
+.commentContent{
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+/* 画廊样式 */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* 画廊中图片样式 */
+.photo {
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+
+}
+
+
+/* 画廊样式 */
+.page-section {
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+
+.page-section-spacing {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 550rpx;
+}
+
+.swiper-item {
+  display: block;
+  height: 550rpx;
+}
+
+
+.gallery_item {
+  width: 100%;
+  height: 550rpx;
+}
+
+.gallery {
+  width: 100%;
+
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: black;
+}
+
+/* 评论相关样式 */
+.comment-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+
+.cf-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.cf-box {
+  padding: 8px 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.t-info textarea {
+  background: red;
+  padding: 8px 5px;
+  height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+
+.cf-content {
+  background-color: #f2f2f2;
+  padding: 8px 5px;
+  font-size: 14px;
+  height: 30px;
+  max-height: 40px;
+  width: 100%;
+}
+
+.cf-send {
+  width: 50px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0 2px !important;
+  font-size: 12px;
+  background-color: #e64340;
+  color: #fff;
+}
+
+.cf-send.touch-active:active {
+  background-color: #b03f3e;
+}
+
+.emoji {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 2px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.emoji-box {
+  position: relative;
+  height: 200px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  margin-bottom: -200px;
+}
+
+.emoji-cell {
+  width: 9.09%;
+  height: 33px;
+  display: inline-block;
+}
+
+.emoji-cell image {
+  width: 23px;
+  height: 23px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.emoji-move-in {
+  -webkit-animation: emoji-move-in 0.3s forwards;
+  animation: emoji-move-in 0.3s forwards;
+}
+
+.emoji-move-out {
+  -webkit-animation: emoji-move-out 0.3s forwards;
+  animation: emoji-move-out 0.3s forwards;
+}
+
+.no-emoji-move {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@-webkit-keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
+}
+
+@keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
+}
+
+@-webkit-keyframes pd-left-move {
+  0% {
+    padding-left: 5px;
+  }
+
+  100% {
+    padding-left: 15px;
+  }
+}
+
+@keyframes pd-left-move {
+  0% {
+    padding-left: 5px;
+  }
+
+  100% {
+    padding-left: 15px;
+  }
+}
+
+
+

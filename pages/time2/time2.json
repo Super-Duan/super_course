@@ -1,7 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarBackgroundColor": "#333",
-  "navigationBarTitleText": "个人主页",
+  "navigationBarTitleText": "番茄闹钟",
   "backgroundColor": "#222",
   "enablePullDownRefresh": false
 }

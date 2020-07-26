@@ -1,0 +1,26 @@
+<!--pages/Grade/Grade.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <open-data type="userAvatarUrl" class="icon" mode="aspectFit"></open-data>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  </view>
+  <view class="cu-list menu card-menu shadow-lg radius">
+      <view class="list-wrapper">
+        <block wx:for="{{menuitems}}" wx:key="item">
+          <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
+            <view class='item'>
+              <image class='item-image' src='../../images/My-active.png '></image>
+              <text class="item-text">{{item.text}}</text>
+              <text class='item-array'>></text>
+            </view>
+            <view class="div-line"></view>
+          </navigator>
+        </block>
+      </view>
+  </view>
+  <ad unit-id="{{isQQ?'e96e50f9c60d305217833f07cb4b7e61':'adunit-0065a48368fd1ab4'}}"></ad>
+</scroll-view>
+
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__text">奶牛课程表</view>
+</view>

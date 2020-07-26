@@ -4,6 +4,10 @@
   flex-direction: column;
   overflow: hidden;
   background-color: #fff;
+  font: 14px "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+view{
+  box-sizing: border-box;
 }
 .record{
   position: absolute;

@@ -1,4 +1,4 @@
-var util = require('../../utils/util.js')
+var time = require('../../utils/util.js');
 Page({
   data: {
     logs: [],
@@ -16,9 +16,14 @@ Page({
   },
   getLogs: function() {
     let logs = wx.getStorageSync('logs')
-    logs.forEach(function(item, index, arry) {
-      item.startTime = new Date(item.startTime).toLocaleString()
-    })
+    if(logs.length > 0)
+    {
+      logs.forEach(function(item, index, arry) {
+        item.startTime = time.transformTimeTwo(item.startTime,'Y/M/D h:m:s');
+        console.log(item.startTime);
+      })
+    }
+    
     this.setData({
       logs: logs
     })

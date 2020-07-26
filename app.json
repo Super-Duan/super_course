@@ -1,18 +1,26 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/HairDynamics/HairDynamics",
+    "pages/DynamicDetails/DynamicDetails",
     "pages/time2/time2",
     "pages/logs/logs",
     "pages/setting/setting",
-    "pages/course/course"
+    "pages/course/course",
+    "pages/My/My"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "backgroundColor": "#333",
+    "color": "#eee",
+    "selectedColor": "#eee",
     "list": [
       {
         "pagePath": "pages/course/course",
@@ -22,7 +30,19 @@
       },
       {
         "pagePath": "pages/time2/time2",
-        "text": "时间",
+        "text": "番茄闹钟",
+        "iconPath": "images/course_.png",
+        "selectedIconPath": "images/course.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "树洞",
+        "iconPath": "images/course_.png",
+        "selectedIconPath": "images/course.png"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的",
         "iconPath": "images/course_.png",
         "selectedIconPath": "images/course.png"
       }
