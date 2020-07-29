@@ -1,0 +1,48 @@
+<navigationBar id="navigationBar" color="#fff" background="#7acfa6" title="{{'登录'}}" back="{{true}}"></navigationBar>
+<view class="container">
+	<view class="remind-box" wx:if="{{remind}}">
+		<image class="remind-img" src="/images/index/loading.gif"></image>
+	</view>
+	<!-- 头部内容 -->
+	<image class="title" src="/images/title.png"></image>
+	<view class="content-setting">
+		<view class="hd" style="transform:rotateZ({{angle}}deg);">
+			<image class="logo" src="/images/avatar/logo.jpg"></image>
+			<image class="wave" src="/images/wave.png" mode="aspectFill"></image>
+			<image class="wave wave-bg" src="/images/wave.png" mode="aspectFill"></image>
+		</view>
+		<view class="bd">
+			<view class="input-group">
+				<view class="input-label" style="flex:1">学号</view>
+				<input bindinput="inputId" style="flex:6" placeholder="学号" value='{{id}}' confirm-type='next' />
+			</view>
+			<view class="input-group">
+				<view class="input-label" style="flex:1">密码</view>
+				<input bindinput="inputPassword" style="flex:6" placeholder="教学管理信息服务平台密码" type="password" value='{{password}}' confirm-type='next' />
+			</view>
+			<view class="input-group">
+				<view class="input-label" style="flex:1">姓名</view>
+				<input bindinput="inputName" style="flex:6" placeholder="真实姓名" value='{{name}}' confirm-type='done' />
+			</view>
+			<view class="input-group">
+				<view class="input-label" style="flex:1">年级</view> 
+					<!-- <van-dropdown-menu direction="up" style="flex:6; justify-content: start;">
+					
+					<van-dropdown-item value="{{ value1}}" options="{{ option1 }}" />
+				</van-dropdown-menu> -->
+				<input bindinput="inputGrade" style="flex:6" placeholder="所在年级" value='{{grade}}' confirm-type='done' />
+			</view>
+			 <view class="input-group">
+				<view class="input-label" style="flex:1">性别</view>
+				<input bindinput="inputGender" style="flex:6" placeholder="性别" value='{{gender}}' confirm-type='done' />
+			</view>
+			<view class="input-group">
+				<view class="input-label" style="flex:1">学校</view>
+				<input bindinput="inputSchool" style="flex:6" placeholder="学校名字" value='{{school}}' confirm-type='done' />
+			</view>
+			<button bindtap="login" class="btn">认证</button>
+			
+	</view> 
+	</view>
+
+</view>

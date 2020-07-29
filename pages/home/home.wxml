@@ -1,0 +1,148 @@
+<!--pages/home/home.wxml-->
+<view>
+	<!-- 标签栏内容 -->
+	<view class="tabs">
+		<van-tabs animated color="rgb(116,104,190)">
+		<!-- 圈儿内部内容 -->
+			<van-tab title="圈儿">
+				<view class="card">
+					<!-- 搜索框 -->
+					<view class="Search">
+						<view class="Search_content">
+							<icon type="search" size="18" style="height:20px" color=""></icon>
+							<input class="search" placeholder="读书"></input>
+						</view>
+					</view>
+				</view>
+				<!-- 主题内容 -->
+				<view class="Card" bindtap="clickCourse">
+					<image src="../../images/home/1.png" style="width:150px" ></image>
+					<view class="Content">
+						<view class="title">课程表</view>
+						<view class="content">书中自有黄金屋 书中自有颜如玉</view>
+					</view>
+				</view>
+
+				<view class="Card" bindtap="clickClock">
+					<view class="Content">
+						<view class="title">番茄闹钟</view>
+						<view class="content">我自律 我快乐 遇到更好的自己</view>
+					</view>
+					<image src="../../images/home/4.png" style="width:150px" mode="widthFix"></image>
+				</view>
+
+				<view class="Card" bindtap="clickHole">
+					<image src="../../images/home/3.png" style="width:150px" mode="widthFix"></image>
+					<view class="Content">
+						<view class="title">树洞</view>
+						<view class="content">记录生活的美好</view>
+					</view>
+				</view>
+
+				<view class="Card" bindtap="clickMy">
+					<view class="Content">
+						<view class="title">我</view>
+						<view class="content">描述生活的美好</view>
+					</view>
+					<image src="../../images/home/2.png" style="width:230px" mode="widthFix"></image>
+				</view>
+			</van-tab>
+			<van-tab title="附近">
+				<view class="card">
+					<!-- 搜索框 -->
+					<view class="Search">
+						<view class="Search_content">
+							<icon type="search" size="18" style="height:20px" color=""></icon>
+							<input class="search" placeholder="读书"></input>
+						</view>
+					</view>
+				</view>
+
+				<!-- 附近部分的主题内容 -->
+				<view class="Card1">
+					<view class="Content">
+						<view class="location_title">小懒发现你在美丽的地球</view>
+						<view class="content">打开定位服务，发现更多自律小伙伴</view>
+					</view>
+					<view class="location">开启定位</view>
+				</view>
+				<!-- 读书圈 -->
+				<view class="Card1">
+					<image src="../../images/home/book.png" style="width:129px;height:80px"></image>
+					<view class="Content">
+						<view class="title">读书圈儿</view>
+						<view class="content">书中自有黄金屋 书中自有颜如玉</view>
+						<view class="content">2km 内 有 219 人参加</view>
+					</view>
+					<view class="bottom">
+						<view class="information">
+							<image src="../../images/avatar/2.jpg" class="avatar"></image>
+							<span class="name">小娃</span> 
+						</view>
+						<view class="locationDetail">
+							<image src="../../images/icon/address.png" class="locationIcon"></image>
+							<text class="distance">1.5km</text>
+						</view>
+					</view>
+				</view>
+				<!-- 跑步圈 -->
+				<view class="Card1">
+					<view class="Content">
+						<view class="title">跑步圈儿</view>
+						<view class="content">我运动 我快乐 遇到更好的自己</view>
+						<view class="content">2km 内 有 219 人参加</view>
+					</view>
+					<image src="../../images/home/run.png" style="width:134px;height:154px"></image>
+					<view class="bottom">
+						<view class="information">
+							<image src="../../images/avatar/2.jpg" class="avatar"></image>
+							<span class="name">小娃</span> 
+						</view>
+						<view class="locationDetail">
+							<image src="../../images/icon/address.png" class="locationIcon"></image>
+							<text class="distance">1.5km</text>
+						</view>
+					</view>
+				</view>
+				<!-- 口语圈 -->
+				<view class="Card1">
+					<image src="../../images/home/speak.png" style="width:182px;height:155px"></image>
+					<view class="Content">
+						<view class="title">口语圈儿</view>
+						<view class="content">Pratice makes prefect</view>
+						<view class="content">2km 内 有 219 人参加</view>
+					</view>
+					<view class="bottom">
+						<view class="information">
+							<image src="../../images/avatar/2.jpg" class="avatar"></image>
+							<span class="name">小娃</span> 
+						</view>
+						<view class="locationDetail">
+							<image src="../../images/icon/address.png" class="locationIcon"></image>
+							<text class="distance">1.5km</text>
+						</view>
+					</view>
+				</view>
+				<!--绘画圈  -->
+				<view class="Card1">
+					<view class="Content">
+						<view class="title">绘画圈儿</view>
+						<view class="content">用画笔描述生活的美好</view>
+						<view class="content">2km 内 有 20 人参加</view>
+					</view>
+					<image src="../../images/home/painting.png" style="width:200px;height:135px"></image>
+					<view class="bottom">
+						<view class="information">
+							<image src="../../images/avatar/2.jpg" class="avatar"></image>
+							<span class="name">小娃</span> 
+						</view>
+						<view class="locationDetail">
+							<image src="../../images/icon/address.png" class="locationIcon"></image>
+							<text class="distance">1.5km</text>
+						</view>
+					</view>
+				</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+</view>

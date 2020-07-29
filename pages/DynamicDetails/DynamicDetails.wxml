@@ -13,13 +13,13 @@
 			<image src="{{itemImg}}" class="photo" wx:for="{{pageList.images}}" wx:for-item="itemImg" wx:key='index' catchtap="onClickShow" data-id="{{item.id}}"></image>
 		</view>
 	</view>
-	<!-- 点赞部分内容 -->
+	<!-- 点赞部分内容
 	<view class="supportDetails">
 		<view class="supportTitle">点赞·{{pageList.support.avatars.length}}位同学</view>
 		<view class="avatars">
 			<image src="{{avatars}}" class="avatars-item" wx:for='{{pageList.support.avatars}}' wx:for-item="avatars" wx:key='index'></image>
 		</view>
-	</view>
+	</view> -->
 	<!-- 评论 -->
 	<view class="commentTitle">评论·{{pageList.support.avatars.length}}位同学</view>
 	<view class="commentDetails" wx:for='{{comments}}' wx:for-item="commentsItem" wx:key='index'>

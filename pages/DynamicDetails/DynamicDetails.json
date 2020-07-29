@@ -3,6 +3,6 @@
     "van-overlay": "@vant/weapp/overlay/index"
   },
   "navigationBarTitleText": "动态详情",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "black"
   
 }

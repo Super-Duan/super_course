@@ -5,6 +5,6 @@
     "van-overlay": "@vant/weapp/overlay/index",
     "van-icon": "@vant/weapp/icon/index"
   },
-  "navigationBarTitleText": "树洞",
-  "navigationBarTextStyle": "white"
+  "navigationBarTitleText": "动态页面",
+  "navigationBarTextStyle": "black"
 }

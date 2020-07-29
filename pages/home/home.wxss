@@ -1,0 +1,154 @@
+/* pages/home/home.wxss */
+/* 卡片视图 */
+.card {
+  width: 100%;
+  display: flex;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-bottom: 1px solid rgba(237,234,244,1);
+  box-shadow: 1px 4px 10px 2px rgba(237,234,244,1);
+  transition: 0.3s;
+   
+}
+/* 标签大小 */
+.van-tabs__nav{
+  width: 60%;
+}
+/* 标签激活时样式类 */
+.van-ellipsis {
+  font-weight: bolder !important;
+  font-size: 32rpx;
+  
+}
+/* 搜索框最外面的布局 */
+.Search{
+  width: 90%;
+  padding-left: 5%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+/* 搜索框内部view样式 */
+.Search_content{
+  width: 70%;
+  height: 45px;
+  display: flex;
+  padding-left: 45%;
+  border-radius: 35px;
+  border: 1px solid whitesmoke;
+  background-color: rgb(237,234,244);
+  align-items: center;
+}
+/* 输入框 */
+.search {
+ margin-left: 5px;
+}
+/* 内容主题区域 */
+/* 卡片视图 */
+.Card {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 2px 4px 8px 5px rgba(237,234,244,1);
+  transition: 0.3s;
+  border-radius: 10px;
+  border: 1px solid  rgba(237,234,244,1);
+}
+
+.Content {
+  margin-left: 5px;
+  padding-bottom: 15px;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 40rpx;
+  margin-bottom: 10px;
+}
+
+.content{
+  font-size: 28rpx;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+/* 附近部分内容的相关样式 */
+.Card1 {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin-bottom: 30px;
+  background-color: white;
+  /* box-shadow: 2px 4px 8px 5px rgba(237,234,244,1); */
+  transition: 0.3s;
+  border-radius: 10px;
+  border: 1.5px solid  rgb(237,234,244);
+   
+}
+.location_title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+/* 开启定位样式 */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #7468BE;
+}
+/* 底部个人信息一栏 */
+.bottom{
+  display: flex;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid  rgb(237,234,244);
+}
+/* 个人头像和姓名信息整体布局 */
+.information {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  align-items: center;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.name {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 14px;
+  color:grey;
+}
+.locationDetail{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.locationIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.distance {
+  font-size: 14px;
+  color: #666666;
+}

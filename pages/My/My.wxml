@@ -1,26 +1,49 @@
-<!--pages/Grade/Grade.wxml-->
-<scroll-view scroll-y class="scrollPage">
-  <view class="UCenter-bg">
-    <open-data type="userAvatarUrl" class="icon" mode="aspectFit"></open-data>
-    <open-data type="userNickName" class="userinfo-nickname"></open-data>
-  </view>
-  <view class="cu-list menu card-menu shadow-lg radius">
-      <view class="list-wrapper">
-        <block wx:for="{{menuitems}}" wx:key="item">
-          <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
-            <view class='item'>
-              <image class='item-image' src='../../images/My-active.png '></image>
-              <text class="item-text">{{item.text}}</text>
-              <text class='item-array'>></text>
-            </view>
-            <view class="div-line"></view>
-          </navigator>
-        </block>
-      </view>
-  </view>
-  <ad unit-id="{{isQQ?'e96e50f9c60d305217833f07cb4b7e61':'adunit-0065a48368fd1ab4'}}"></ad>
-</scroll-view>
-
-<view class="weui-footer weui-footer_fixed-bottom">
-  <view class="weui-footer__text">奶牛课程表</view>
+<!-- 个人信息页面 -->
+<view class="card">
+    <view>
+         <image src="/images/avatar/1.jpg" class="avatar" />
+         <view class="name">心之所向</view>
+    </view>
+   
+    <view class="header_right">
+        <view class="header_item">
+            <view class="startTime">2018年</view>
+            <view class="timeText">入学时间</view>
+        </view>
+        <view class="header_item">
+            <view class="startTime">162次</view>
+            <view class="timeText">累计打卡</view>
+        </view>
+        <view class="header_item">
+            <view class="startTime">185条</view>
+            <view class="timeText">发布动态</view>
+        </view>
+        <view class="header_item">
+        <navigator url="/pages/modifyInfo/modifyInfo">
+            <button class="btn">修改个人信息</button>
+        </navigator>
+        </view>
+    </view>
+</view>
+<view class="card">
+    <view class="btns">
+        <button class="btn">全部</button>
+        <button class="btn">软件工程专业</button>
+        <button class="btn">喜欢读书</button>
+    </view>
+</view>
+<view class="card">
+    <view class="title">
+        <image src="/images/home/book.png" class="img" mode="aspectFit"/>
+        <view class="titleText">读书圈儿</view>
+    </view>
+    <view class="content">
+        <view class="contentTop">
+            <view class="now">5-21 14:00</view>
+            <view class="finishTime">连续执行10天</view>
+        </view>
+        <view class="contentDetail">
+        轻启轩窗，春燕盘旋，杨柳依依，芳草青青，花影斑驳，桃李芳菲尽，夏花次第开。五月的风儿，轻轻的柔柔的暖暖的亲吻过脸颊，鼻间新绿的清香泉水般“汩汩”的流淌。走过春天，躲过流年，站在五月的时空隧道中，时光竟然还是这般的如此匆匆。绿萝拂过衣襟，青云打湿诺言，红尘陌上，我们独自行走，风儿吹乱了发梢，惊扰了一地的千纸鹤。轻点朱颜淡描妆，树影婆娑，花儿摇曳。也许，我们都很好，只是时光不凑巧。
+        </view>
+    </view>
 </view>

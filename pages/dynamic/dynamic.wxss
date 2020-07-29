@@ -1,12 +1,15 @@
 page {
-  font-family: Microsoft YaHei;
+  background-color: rgba(243, 241, 241, 0.925);
 }
 
 .template {
   width: 94%;
   padding: 3%;
-  margin-top: 20rpx;
-  border-top: 10rpx solid rgba(1, 1, 1, 0.1);
+  margin-bottom:15px;
+  background-color: white;
+  border-bottom: 1px solid #edeaf4;
+  box-shadow: 1px 4px 10px 2px #edeaf4;
+  transition: 0.3s;
 }
 
 .header {

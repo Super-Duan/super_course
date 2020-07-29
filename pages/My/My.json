@@ -1,9 +1,6 @@
 {
   "usingComponents": {
-    "wux-progress": "../../dist/progress/index"
+ 
   },
-  "navigationBarBackgroundColor": "#333",
-  "navigationBarTitleText": "个人主页",
-  "backgroundColor": "#222",
-  "enablePullDownRefresh": false
-} 
+  "navigationBarTitleText": "个人主页"
+}

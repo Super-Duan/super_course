@@ -1,0 +1,11 @@
+ <view class="bg">
+ <view class="input-group">
+				<view class="input-label" style="flex:1">小程序昵称</view>
+				<input bindinput="inputName" style="flex:6" placeholder="性别" value='{{name}}' confirm-type='done' />
+			</view>
+			<view class="input-group">
+				<view class="input-label" style="flex:1">微信昵称</view>
+				<input bindinput="inputNickname" style="flex:6" placeholder="学校名字" value='{{nickname}}' confirm-type='done' />
+			</view>
+<button class="btn" bindtap="modify"> 确认修改</button>
+</view>

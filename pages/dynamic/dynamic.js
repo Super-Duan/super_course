@@ -48,11 +48,7 @@ Page({
       C_title: '1',
       S_title: '2',
       images: [
-        '../../images/avatar/1.jpg',
-        '../../images/avatar/1.jpg',
-        '../../images/avatar/1.jpg',
-        '../../images/avatar/1.jpg',
-
+        'http://tmp/wx7a98e89e5c97ba6c.o6zAJs5kVOHokuqWMt_-iwEkYN0Y.iPkvfIz5c68vdf11bcb0558d2bdd0324c4d2be8b0ef4.jpg',
       ],
       comment: [],
       support:
@@ -86,8 +82,8 @@ Page({
         '../../images/avatar/1.jpg',
         '../../images/avatar/1.jpg',
 
-      ], support:
-      {
+      ], 
+      support:{
         avatars: [
           '../../images/avatar/1.jpg',
           '../../images/avatar/1.jpg',
@@ -305,5 +301,71 @@ cemojiCfBg: function () {
   this.setData({
     isShow: false,
     cfBg: false
-  })}
+  })},
+
+  // 获取商品列表数据
+  async getGoodsList(){
+    const res =await request({url:'/goods/search',data:this.QueryParams});
+    //获取总条数
+    const total=res.data.message.total;
+    //计算总页数
+    this.totalPages=Math.ceil(total/this.QueryParams.pagesize);
+    this.setData({
+      //拼接了数据
+      goodsList:[...this.data.goodsList,...res.data.message.goods]
+    })
+
+    //关闭下拉刷新的窗口,如果没有调用下拉刷新的窗口，直接关闭也不会报错
+    wx.stopPullDownRefresh();
+
+    
+
+  }
+,
+
+//标题点击事件 从子组件中传递过来
+handleItemTabsChange(e){
+  //1.获取被点击的标题索引
+  const {index}=e.detail;
+  //2.修改原数组
+  let {tabs}=this.data;
+  tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
+  this.setData({
+    //3. 复制到data中
+    tabs:tabs
+  })
+},
+  
+//页面上滑 滚动条触底时间
+onReachBottom(e){
+  if(this.QueryParams.pagenum>=this.totalPages){
+    //没有下一页数据
+    // console.log("没有下一页数据量")
+    //弹框提示用户
+    wx.showToast({
+      title: '没有下一页数据了!',
+     
+    });
+   
+  }
+  else{
+     //还有下一页数据
+    //  console.log("还有下一页数据")
+    this.QueryParams.pagenum++;
+    this.getGoodsList();
+  }
+},
+//触发下拉刷新的事件
+onPullDownRefresh(){
+ //1.重置数组
+ this.setData({
+   goodsList:[]
+ })
+ // 2.重置页码
+ this.QueryParams.pagenum=1;
+ //3.发送请求
+ this.getGoodsList();
+},
+
 })
+

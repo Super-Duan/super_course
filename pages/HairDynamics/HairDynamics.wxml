@@ -1,14 +1,17 @@
 <view class='page'>
   <textarea class='text' bindinput="input" placeholder="想到什么就说点什么吧" auto-height/>
   <view class="image_content">
-    <view class='image' wx:for="{{img_url}}" wx:key="index">
+    <view class='image' wx:for="{{imgUrl}}" wx:key="index">
       <image class="moment_img" src="{{item}}"></image>
     </view>
     <view class='image' style='display:{{hideAdd?"none":"block"}}'>
       <image bindtap="chooseimage" class="moment_img" src='../../images/icon/post.png'></image>
     </view>
   </view>
-  <button bindtap="send" style='margin-right:5px;margin-left:5px'>发布</button>
+  <view class="release">
+  <button bindtap="img_upload" class="btn" wx:if="{{show}}">上传图片</button>
+   <button bindtap="send" class="btn"wx:else="{{!show}}">发布树洞</button>
+  </view>
 </view>
 
 

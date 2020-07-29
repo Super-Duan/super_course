@@ -3,10 +3,10 @@
 Page({
   data: {
     listData:[
-      ["一二","线性代数 综合楼","人文科学 信科二阶","经济地理","人文物理 综合楼三教","高等数学 信科三阶"],
+      ["一二","","","","",""],
       ["三四","","","","",""],
       ["五六","","","","",""],
-      ["七八","","","","","概率论"],
+      ["七八","","","","",""],
       ["九十","","","","",""],
       ["十一十二","","","","",""]
     ],//课程列表
@@ -34,7 +34,6 @@ modalinput:function(e){
     rowPlan: i,
     colPlan: j
   })
-  console.log(this.data.listData)
 },
 
 //获取plan的input值
@@ -69,7 +68,8 @@ console.log(this.data.listData)
 },
 
 onLoad:function(){
-  console.log(this.data.listData)
+  console.log(this.data.listData);
+  console.log(this.data.listData[0][0]);
   
 },
 
@@ -87,11 +87,27 @@ if(!wx.getStorageSync('isLogin')){
     //已登录
     wx.showToast({title: '正在加载课表', icon: 'loading', duration: 10000});
     wx.hideToast();
+    var course = wx.getStorageSync('courseInfo');
+    // var length = course.length;
+    for(let k in course){
+      console.log(Math.floor(course[k].time/10));
+      console.log(course[k].time%10);
+      var weekday = Math.floor(course[k].time/10);
+      var courseNum = course[k].time%10;
+      var listData = this.data.listData;
+      listData[courseNum-1][weekday] = course[k].targetName + "   " + course[k].position;
+      console.log(this.data.listData);
+      // this.setData({
+      //   listData: this.listData
+      // })
+      // this.data.listData[]
+    }
     this.setData({
     course_empty:false,
-    listData: this.listData
+    listData: this.data.listData
       });
-    console.log(this.data.listData)
+    console.log(this.data.listData);
+
     
       // wx.setStorageSync(course_cache, this.listData) //缓存课表
       // console.log(this.listData);
